@@ -1,5 +1,6 @@
 {
     "msg": "Hey! How are you?",
     "hint": "Select a language",
-    "title": "Localization demo"
+    "title": "Localization demo",
+    "name": "My name is ${name}"
 }

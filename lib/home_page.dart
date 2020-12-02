@@ -26,6 +26,10 @@ class _MyHomeState extends State<HomePage> {
             Text(
               getTranslated(context, 'msg'),
             ),
+            Text(
+              getTranslated(context, 'name')
+                  .replaceAll(new RegExp(r'\${name}'), 'Aman'),
+            ),
             DropdownButton(
                 hint: Text(getTranslated(context, 'hint')),
                 items: getLanguages.map((Language lang) {
