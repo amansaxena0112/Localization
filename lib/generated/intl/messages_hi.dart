@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a hi locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -17,18 +17,18 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'hi';
 
-  static m0(firstname, lastname) => "My name is ${firstname} ${lastname}";
+  static m0(firstname, lastname) => "मेरा नाम है ${firstname} ${lastname}";
 
-  static m1(name) => "My name is ${name}";
+  static m1(name) => "मेरा नाम है ${name}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "full_name" : m0,
-    "hint" : MessageLookupByLibrary.simpleMessage("Select a language"),
-    "msg" : MessageLookupByLibrary.simpleMessage("Hey! How are you?"),
+    "hint" : MessageLookupByLibrary.simpleMessage("भाषा चुनें"),
+    "msg" : MessageLookupByLibrary.simpleMessage("अरे! क्या हाल है?"),
     "name" : m1,
-    "title" : MessageLookupByLibrary.simpleMessage("Localization demo")
+    "title" : MessageLookupByLibrary.simpleMessage("स्थानीयकरण डेमो")
   };
 }

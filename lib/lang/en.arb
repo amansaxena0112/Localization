@@ -2,6 +2,5 @@
     "msg": "Hey! How are you?",
     "hint": "Select a language",
     "title": "Localization demo",
-    "name": "My name is {name}",
-    "full_name": "My name is {firstname} {lastname}"
+    "name": "My name is {name}"
 }

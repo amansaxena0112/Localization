@@ -35,7 +35,55 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Hey! How are you?`
+  String get msg {
+    return Intl.message(
+      'Hey! How are you?',
+      name: 'msg',
+      desc: '',
+      args: [],
+    );
+  }
 
+  /// `Select a language`
+  String get hint {
+    return Intl.message(
+      'Select a language',
+      name: 'hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Localization demo`
+  String get title {
+    return Intl.message(
+      'Localization demo',
+      name: 'title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My name is {name}`
+  String name(Object name) {
+    return Intl.message(
+      'My name is $name',
+      name: 'name',
+      desc: '',
+      args: [name],
+    );
+  }
+
+  /// `My name is {firstname} {lastname}`
+  String full_name(Object firstname, Object lastname) {
+    return Intl.message(
+      'My name is $firstname $lastname',
+      name: 'full_name',
+      desc: '',
+      args: [firstname, lastname],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -44,6 +92,9 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
+      Locale.fromSubtags(languageCode: 'hi'),
+      Locale.fromSubtags(languageCode: 'ps'),
     ];
   }
 

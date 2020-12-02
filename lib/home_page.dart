@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:localization_app/generated/l10n.dart';
 import 'package:localization_app/language.dart';
 import 'package:localization_app/localization/demo_localization.dart';
 import 'package:localization_app/localization/localization_constants.dart';
@@ -24,11 +25,13 @@ class _MyHomeState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              getTranslated(context, 'msg'),
+              S.of(context).msg,
             ),
             Text(
-              getTranslated(context, 'name')
-                  .replaceAll(new RegExp(r'\${name}'), 'Aman'),
+              S.of(context).name('Aman'),
+            ),
+            Text(
+              S.of(context).full_name('Aman', 'Saxena'),
             ),
             DropdownButton(
                 hint: Text(getTranslated(context, 'hint')),

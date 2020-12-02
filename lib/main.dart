@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:localization_app/generated/l10n.dart';
 import 'package:localization_app/language.dart';
 import 'package:localization_app/localization/demo_localization.dart';
 import 'package:localization_app/localization/localization_constants.dart';
@@ -41,19 +42,23 @@ class _MyAppState extends State<MyApp> {
         default:
           _locale = Locale(code, 'US');
       }
+      S.load(_locale);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      supportedLocales: [
-        Locale('en', 'US'),
-        Locale('ar', 'SA'),
-        Locale('ps', 'AR'),
-        Locale('hi', 'IN'),
-      ],
+      // supportedLocales: [
+
+      //   Locale('en', 'US'),
+      //   Locale('ar', 'SA'),
+      //   Locale('ps', 'AR'),
+      //   Locale('hi', 'IN'),
+      // ],
+      supportedLocales: S.delegate.supportedLocales,
       localizationsDelegates: [
+        S.delegate,
         DemoLocalization.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
