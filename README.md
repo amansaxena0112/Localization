@@ -1,6 +1,6 @@
 # localization_app
 
-A new Flutter project.
+A Flutter project which demonstrate the app localization for multiple languages and with ability to customize the string with any number of parameters within a string. In the project .arb files are used for different language files.
 
 ## Getting Started
 
